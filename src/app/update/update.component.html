@@ -1,0 +1,74 @@
+<div class="container container-form">
+    <form [formGroup]="updateForm">
+        <label>Datos de la persona Natural o Jurídica que solicita el servicio de trámites virtuales:</label>
+        <div class="form-group">
+            <label>Naturaleza:*</label>
+            <select formControlName="IdentificationType">
+                <option *ngFor="let doc of documentTypes" [value]="doc">
+                    {{doc}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Número de identificación:*</label>
+            <input type="text" class="form-control" formControlName="IdentificationNumber">
+        </div>
+        <div class="form-group">
+            <label>Nombre/Razón Social:*</label>
+            <input type="text" class="form-control" formControlName="CompanyName">
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Vía</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Nro*</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Letra</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Nro*</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Letra</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Nro y complementos*</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Dirección*</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Municipio*</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Teléfono*</label>
+            <input type="text" class="form-control">
+        </div>
+        <!-- <div class="container btn-container">
+        <button (click)="verifyNit()" class="btn btn-danger btn-expanded">Continuar</button><button class="btn btn-dark btn-expanded">Regresar</button>
+        </div> -->
+    </form>
+</div>

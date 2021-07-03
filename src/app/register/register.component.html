@@ -1,0 +1,11 @@
+<div class="container container-form">
+    <div class="form-group">
+        <label>Ingrese el NIT de la persona natural o jurídica para la que realizará el trámite, sin incluir el dígito de verificación. Luego seleccione <b>Continuar</b> para completar su solicitud.</label>
+        <br>
+        <label>N.I.T.</label>
+        <input type="number" class="form-control" [formControl]="documentIdControl">
+    </div>
+    <div class="container btn-container">
+        <button (click)="verifyNit()" class="btn btn-danger btn-expanded">Continuar</button><button class="btn btn-dark btn-expanded">Regresar</button>
+    </div>
+</div>
