@@ -37,6 +37,9 @@ export class RegisterComponent implements OnInit {
       },
       error => {
         console.log(error);
+        this.snackBar.open("No fue posible validar el número. Ocurrió un error interno.", null, {
+          duration: 3000
+        });
       }
     );
   }

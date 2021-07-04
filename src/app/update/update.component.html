@@ -11,37 +11,37 @@
         </div>
         <div class="form-group">
             <label>Número de identificación:*</label>
-            <input type="number" class="form-control" formControlName="IdentificationNumber" disabled="disabled">
+            <input type="number" class="form-control" formControlName="IdentificationNumber">
         </div>
         <div class="row" *ngIf="updateForm.value.IdentificationType == 'Persona Natural'">
             <div class="col">
                 <div class="form-group">
                     <label>Primer Apellido:*</label>
-                    <input type="text" class="form-control" formControlName="FirstLastName">
+                    <input type="text" class="form-control" formControlName="FirstLastName" onkeypress="return /[a-z]/i.test(event.key)">
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label>Segundo Apellido:*</label>
-                    <input type="text" class="form-control" formControlName="SecondLastName">
+                    <input type="text" class="form-control" formControlName="SecondLastName" onkeypress="return /[a-z]/i.test(event.key)">
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label>Primer Nombre:*</label>
-                    <input type="text" class="form-control" formControlName="FirstName">
+                    <input type="text" class="form-control" formControlName="FirstName" onkeypress="return /[a-z]/i.test(event.key)">
                 </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label>Segundo Nombre:*</label>
-                    <input type="text" class="form-control" formControlName="SecondName">
+                    <input type="text" class="form-control" formControlName="SecondName" onkeypress="return /[a-z]/i.test(event.key)">
                 </div>
             </div>
         </div>
         <div class="form-group" *ngIf="updateForm.value.IdentificationType == 'Persona Jurídica'">
             <label>Razón Social:*</label>
-            <input type="text" class="form-control" formControlName="CompanyName">
+            <input type="text" class="form-control" formControlName="CompanyName" onkeypress="return /[a-z]/i.test(event.key)">
         </div>
         <div class="form-group">
             <label>Correo electrónico:*</label>
